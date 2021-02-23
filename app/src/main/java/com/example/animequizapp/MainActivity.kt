@@ -1,5 +1,6 @@
 package com.example.animequizapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.btnStart.setOnClickListener{
+
+            val intent = Intent(this, QuizActivity::class.java)
+            startActivity(intent)
 
             Toast.makeText(this, "Start button clicked",Toast.LENGTH_LONG).show()
 
